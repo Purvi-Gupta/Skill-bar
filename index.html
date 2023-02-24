@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+font-family:Verdana,Arial,sans-serif;
+}
+html,body{
+display:grid;
+height:100vh;
+background:silver;
+place-items: center;
+}
+.skillbar{
+width:320px;
+background:#fff;
+box-shadow:5px 5px 10px rgba(0,0,0,0.2);
+border-radius:10px;
+padding:15px 10px;
+}
+.skillbar .bar{
+margin:15px;
+}
+.skillbar .bar:first-child {
+margin-top:0px;
+}
+.skillbar .bar:last-child{
+margin-bottom:0px;
+}
+.skillbar .bar .information span{
+font-size:12px;
+font-weight:500px;
+}
+.skillbar .bar .progressline{
+height:10px;
+width:100%;
+border-radius:10px;
+position:relative;
+background:#f0f0f0;
+transform-origin:left;
+animation:rotate 1s 0.5s;
+box-shadow:0px 1px 1px rgba(0,0,0,0.5) inset ;
+}
+.skillbar .bar .progressline span{
+position:absolute;
+height:100%;
+background:steelblue;
+border-radius:11px;
+transform-origin:left;
+animation:rotate 1s 0.5s;
+
+}
+@keyframes rotate{
+0%{transform:scaleX(0);}
+100%{transform:scaleX(1);
+animation-play-state:paused;}
+}
+.skillbar .bar .progressline span::before{
+position:absolute;
+content:"";
+height:0px;
+width:0px;
+border:7px solid transparent;
+border-bottom-width:0px;
+border-right-width:0px;
+border-top-color:#000;
+top:-10px;
+right:0px;
+}
+.skillbar .bar .progressline span::after{
+position:absolute;
+top:-20px;
+right:0px;
+color:white;
+background:black;
+font-size:10px;
+font-weight:500px;
+padding:1px 8px;
+border-radius:3px;
+}
+.progressline.html span::after{
+content:"90%";
+}
+.progressline.css span::after{
+content:"80%";
+}
+.progressline.c span::after{
+content:"70%";
+}
+.progressline.cpp span::after{
+content:"25%";
+}
+.progressline.html span{
+width:90%;
+}
+.progressline.css span{
+width:80%;
+}
+.progressline.c span{
+width:70%;
+}
+.progressline.cpp span{
+width:25%;
+}*/
+</style>
+</head>
+<body>
+<div class="skillbar" >
+ <div class="bar" >
+ <div class="information" >
+ <span>Html</span></div>
+ <div class="progressline html" >
+ <span></span>
+ </div>
+ </div>
+ <div class="bar" >
+ <div class="information" >
+ <span>Css</span></div>
+ <div class="progressline css" >
+ <span></span>
+ </div>
+ </div>
+ <div class="bar" >
+ <div class="information" >
+ <span>C</span></div>
+ <div class="progressline c" >
+ <span></span>
+ </div>
+ </div>
+ <div class="bar" >
+ <div class="information" >
+ <span>C++</span></div>
+ <div class="progressline cpp" >
+ <span></span>
+ </div>
+ </div>
+</div>
+
+</body>
+</html>
